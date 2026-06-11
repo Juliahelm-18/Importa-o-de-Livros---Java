@@ -22,13 +22,11 @@ public class LeitorCSV {
 
             while ((linha = br.readLine()) != null) {
 
-                String[] dados = linha.split(",");
+                if (linha.trim().isEmpty()) {
+                    continue;
+                }
 
-                System.out.println(
-                        "Registro com "
-                                + dados.length
-                                + " atributos."
-                );
+                String[] dados = linha.split(",");
 
                 Livro livro = new Livro(
                         Integer.parseInt(dados[0]),

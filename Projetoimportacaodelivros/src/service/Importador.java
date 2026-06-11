@@ -19,10 +19,10 @@ public class Importador {
             dao.inserir(livro);
         }
 
-        System.out.println(
-                "\nTotal importado: "
-                        + livros.size()
-                        + " registros."
-        );
+        System.out.println("\nTotal importado: "
+                + livros.size()
+                + " registros.");
+
+        System.out.println("Cada registro possui 5 atributos.");
     }
 }
